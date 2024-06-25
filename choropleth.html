@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="vector.html">Vector</a></li>
+							<li><a href="choropleth.html">Choropleth</a></li>
+							<li><a href="landcover.html">Land Cover</a></li>
+							<li><a href="lidar.html">Lidar</a></li>
+							<li><a href="relative elevation model.html">Relativel Elevation Model</a></li>
+							<li><a href="carbon calculation.html">Carbon Calculations</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Choropleth Map</h1>
+							<span class="image main"><img src="images/choropleth.png" alt="" /></span>
+							<p>The map above is a choropleth map. A choropleth map is a map with a color of different shades which represents quantitative data – that is data that can be measured. The data is ordered through dark to light or vice versa, in this case the highest number is the darkest shade. The SDG indicator I picked looked at how much of a country’s marine areas are protected in relation to the marine area available to that country. This is represented in percentage, 100% being all a country’s marine areas are protected and 0% being none. </p> 
+							<p>To make this map, I started by finding the data I wanted to represent. This
+was done through the data catalogue of the UN Sustainable Developmental Goals (SDG). I am most interested in SDG 14 (Life Below Water) where I found SDG 14.5.1 which as explained earlier, has data regarding how much of a country’s marine area is protected. I focused on the latest data which was from 2020. I then imported this data as a Shapefile to upload onto QGIS – a software used to create maps. Once the data was imported, I still had to import a different file to make a choropleth map as the UN puts a singular point in the center of a country rather than identifying the entire country. The new shapefile added had the name of the countries as well as their location, representing a map of the world. These two layers were then joined. This allowed for the points to be changed to shaded regions of the world map to create a choropleth map. This was done by changing the symbology and classifying the values within certain ranges. I chose to use the colour blue as we were discussing water. I then changed the ranges of the values for which each shade was used in order for the data to be easily readable by as wide of an audience as possible. Finally, I changed the projection for the map to be an equal area projection which is, the proportionate area of a country in relation to others on a map. This created the first map on QGIS. I then added this map to Esri Online with the same classifying values. I also added SDG 15.1.1 which looks at the amount of forested area in relation to the total area of each country. From these two layers, I added a slider as can be seen at the bottom of this page. This allows to compare the amount of forested areas (in green) and the amount of marine protected areas (in blue) per country. </p>
+						<iframe src="https://uni-utrecht.maps.arcgis.com/apps/instant/media/index.html?appid=86608fdf2fc444b2972fb63e230ddad9" width="100%" height="800px" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
+						
+						
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

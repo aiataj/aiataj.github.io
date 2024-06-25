@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="vector.html">Vector</a></li>
+							<li><a href="choropleth.html">Choropleth</a></li>
+							<li><a href="landcover.html">Land Cover</a></li>
+							<li><a href="lidar.html">Lidar</a></li>
+							<li><a href="relative elevation model.html">Relativel Elevation Model</a></li>
+							<li><a href="carbon calculation.html">Carbon Calculations</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Land Cover</h1>
+							<span class="image main"><img src="images/OGUtrecht.png"/></span>
+							<div style="text-align: center;">
+							<p>All the maps on this page are from the same area in Utrecht. The map is from Google Earth Engine which was exported onto ArcGIS pro where different analysis were conducted. This map is the original map, also called a true color composite. That is, the bands used represent the colors showed on the map allowing the area to resemble what would be seen by the human eye.
+							<div style="text-align: left;">
+								<ul>
+									<li>Red - B4 (red)</li>
+									<li>Green - B3 (green)</li>
+									<li>Blue - B2 (blue)</li>
+								</ul>
+							<div style="text-align: center;">
+							<img src="images/false.png" width="900" height="400" alt="" />
+							<p> <h2><b>False Color Composite </b></h2></p>
+							<div style="text-align: left;">
+							<p> In the map above, we can see a false color composite. That is, the band colors do not represent the true colors. In a true color composite map, red is band 4, green is band 3 and, blue is band 2. In the false color composite map above, red is band 8, green is band 4 and, blue is band 3. Band 8 is visible and near infrared which shows chlorophyll. This aids in showing plants and their health, the reder an area is, the healthier it is. Band 4 is red which also designates areas with the color green as red. FInally, band 3 shows areas that are blue to contrast with the red from plants. Together, we get the map above which designated green areas and the health of the plants in these areas.</p>
+							<p> There are 3 main types of classifications that I explored: unsupervised pixel, unsupervised object, and supervised pixel. These 3 types of classifications will be explored below with the use of the same map as above. </p>
+							<div style="text-align: center;">
+							<img src="images/unsupervised_pixel.png" width="900" height="400" alt="" />
+							<p> <h2><b> Unsupervised Pixel </b></h2></p>
+							<div style="text-align: left;">
+							<p>This classification system is as understood from the name, unsupervised. This means that the program will classify the areas. In this case, based on the pixels. As can be seen on the map above, the program has only detected two classes (pink and green). When we compare this map to the first one, we can see that all areas that are blue, are classified as the same. The biggest spot classified as such is Utrecht Central, the train station.</p>
+							<div style="text-align: center;">
+							<img src="images/unsupervised_object.png" alt="" width="900" height="400" class="center"/>
+							<p> <h2><b> Unsupervised Object </b></h2></p>
+							<div style="text-align: left;">
+							<p> This classification system, similar to the one above is unsupervised however, instead of looking at pixels to determine classes, it looks at objects. To do this, the program determines areas that are similar. In the case of this map, the unsupervised object classification looks extremly similar to the unsupervised pixel classification. </p>
+							<p> It seems that when it comes to unsupervised classifications with this map any blue colour is identified as a class. This is the case in both the object and pixel unsupervised classifications. The rest of the map is identified as a seperate class. This is most likely due to the habitation areas (such as the center of Utrecht) having many different colours due to their close proximity.</p>
+							<div style="text-align: center;">
+							<img src="images/supervised_pixel.png" alt="" width="900" height="400"/>
+							<p> <h2><b> Supervised Pixel </b></h2></p>
+							<div style="text-align: left;">
+							<p>Supervised pixel classification unlike unsupervised, is done manually. To do this, ArcGIS pro had pre-determined classes which I could edit. In this map, I used three main classes: water, built environments and, greenery. The pink on the map represents the built areas such as housing, buildings and roads, water is depicted as blue and, greenery as green. </p>
+							<p> Personally, I found the supervised pixel classification the most accurate and therefore, my favorite. For this map specifically, I found the program struggled to differentiate between vegetation and highly built environments. This was a limitation with unsupervised classifications which was not an issue with the supervised classification. However, supervised classification also has its limitations. Because it is not manually, it takes more time and allows for more human errors. In the map above, I selected parts however, I was not as specific as I could have been. I was also able to do this because I know the area. Therefore, unsupervised classifications can be helpful when the aim does not have specific classifications and the area is not too compressed. This means an area that is not like Utrecht with buildings very close together.
+							<div style="text-align: center;">
+							<img src="images/nivgmap.png" alt="" width="900" height="400"/>
+							<p> <h2><b> NDVI </b></h2></p>
+							<div style="text-align: left;">
+							<p> NDVI stands for Normalised Difference Vegetation Index. It is a range from -1 to +1. +1 most likely represents very dense green areas while, -1 most often represents water. It uses the calculation below to quantify vegetation.</p>
+							<p> <blockquote> NDVI=<sup>(NIR-Red)</sup>&frasl;<sub>(NIR+Red)</sub> </blockquote></p>
+							<p>Near-infrared (NIR) is reflected by chlorophyll which is a higher concentration indicated higher health vegetation. Red on the other hand is reflected when plants are less healthy. With this calculation, we get an understanding of the relationship between NIR and red wavelengths allowing an estimate of plant health. As we can see on the map, the very dark red line is water which as we have seen from the range makes sense. We then see a lot of green with a variety of shades, the darkest being the healthiest plants and the ligher greens being less healthy. From this map, we can get an overall idea of the plant health in Utrecht. An interesting application of this map would be to repeat it in winter and compare plant health.</p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
