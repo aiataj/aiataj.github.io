@@ -55,7 +55,7 @@
 						<div class="inner">
 							<h1>Carbon Calculations</h1>
 							<iframe src="https://ee-23aiataj.projects.earthengine.app/view/tahiticarbon" width="1200" height="600" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
+							<p>This map is the Google Earth Engine map I created. I started off by using <a href="https://geojson.io/#map=9.46/12.5991/-70.0197">geojson</a>. I found Tahiti on the map and used the "draw polygon (p)" tool to outline the island. I then saved this as a shapefile and imported it onto Google Earth Engine. Based on this, I could find the longitude and latitude. I then used the <a href="https://data.ceda.ac.uk/neodc/esacci/biomass/data/agb/maps/v4.0/geotiff/2020">CEDA archives</a> to find the coordinates that matched. This was quite challenging as the coordinates of Tahiti did not exist so I had to try multiple different coordinates until I found one that overlapped.</p>
 							<div style="text-align: center;">
 							<img src="images/ACD.png" width="1000" height="400" alt="" />
 							<p> <h2><b>Above-ground Carbon Density </b></h2></p>
@@ -70,7 +70,7 @@
 							<img src="images/both.png" width="1000" height="400" alt="" />
 							<p> <h2><b>Overlay ACD and GPP</b></h2></p>
 							<div style="text-align: left;">
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<p>Based on this map which overlayes ACD and GPP, we can see that most areas on Tahiti have high GPP and ACD. When we overlap the two maps and decrease the opacity of GPP, we can see both layers. The very dark areas are low values in ACD. So, a good area to protect would be the centre of island where it is a medium orange colour as it shows both the highest GPP and ACD values. This is also the case after the shore line and before the dark orange colour (low ACD). High ACD areas should be especially protected as they are already have a lot of carbon stored. This island all together would be very important to preserve as GPP is high on a lot of the island. When it comes to ACD, not protecting high ACD areas could lead to a lot of carbon being released while areas with low ACD, still have high GPP which means they have the potential to take up more carbon.</p>
 						</div>
 					</div>
 
