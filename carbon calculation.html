@@ -55,12 +55,20 @@
 						<div class="inner">
 							<h1>Carbon Calculations</h1>
 							<iframe src="https://ee-23aiataj.projects.earthengine.app/view/tahiticarbon" width="1200" height="600" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
-							<p>This map is the Google Earth Engine map I created. I started off by using <a href="https://geojson.io/#map=9.46/12.5991/-70.0197">geojson</a>. I found Tahiti on the map and used the "draw polygon (p)" tool to outline the island. I then saved this as a shapefile and imported it onto Google Earth Engine. Based on this, I could find the longitude and latitude. I then used the <a href="https://data.ceda.ac.uk/neodc/esacci/biomass/data/agb/maps/v4.0/geotiff/2020">CEDA archives</a> to find the coordinates that matched. This was quite challenging as the coordinates of Tahiti did not exist so I had to try multiple different coordinates until I found one that overlapped.</p>
+							<p>This map is the Google Earth Engine map I created. I started off by using <a href="https://geojson.io/#map=9.46/12.5991/-70.0197">geojson</a>. I found Tahiti on the map and used the "draw polygon (p)" tool to outline the island. I then saved this as a shapefile and imported it onto Google Earth Engine. Based on this, I could find the longitude and latitude. I then used the <a href="https://data.ceda.ac.uk/neodc/esacci/biomass/data/agb/maps/v4.0/geotiff/2020">CEDA archives</a> to find the coordinates that matched. This was quite challenging as the coordinates of Tahiti did not exist so I had to try multiple different coordinates until I found one that overlapped with the location of tahiti. By adding this to the code on Google Earth Engine, I was able to get ACD and create this map.</p>
+							<p> Tahiti is an island part of French Polynesia in the middle of the Pacific Ocean. It has a tropical climate with tropical rainforests. In this map, I explored which area should be protected based on GPP and ACD. GPP is gross primary productivity which is the rate at which plants are uptaking carbon through photosynthesis. ACD is above-ground carbon density and looks at how much carbon plants store in the parts they have above ground such as branches.
 							<div style="text-align: center;">
 							<img src="images/ACD.png" width="1000" height="400" alt="" />
 							<p> <h2><b>Above-ground Carbon Density </b></h2></p>
 							<div style="text-align: left;">
-							<p>This map looks at carbon dense areas in Tahiti. Tahiti is an island part of French Polynesia in the middle of the Pacific Ocean. It has a tropical climate with tropical rainforests. In this map, I explored which area should be protected based on GPP and ACD. GPP is gross primary productivity which is the rate at which plants are uptaking carbon through photosynthesis. ACD is above-ground </p>
+							<p>This map looks at carbon dense areas in Tahiti. In this map, we are focusing of ACD. As we can see, most of the island is green but with some black areas. This indicates most of the vegetation on this island stores more than 100 tonnes of carbon per hectare. However, one might wonder why these black areas are there. Although there is no definite answer, it seems these areas are the do not have as many sharp elevation changes and therefore, could be houses. If you would like to see this, you can use the interactive map above follow these steps.</p>
+							<h3>Ordered</h3>
+								<ol>
+								 <li>In the top right corner "mapStlye" is currently selected, click "map"</li>
+								 <li>A little tab should appear below with the word "terrain", check the box next to it</li>
+								 <li>Now, click "Layers" and unselect "GPP"</li>
+								 <li>Play around with the slider next to "ACD" in order to see both the elevation and the colour</li>
+								</ol>
 							<div style="text-align: center;">
 							<img src="images/GPP.png" width="1000" height="400" alt="" />
 							<p> <h2><b>Gross Primary Productivity </b></h2></p>
